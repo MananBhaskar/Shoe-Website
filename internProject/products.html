@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleproduct.css">
+    <title>Products</title>
+</head>
+<body>
+    
+        <style>
+            html{
+    font-size: 60%;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    padding: 1.5rem 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+header .logo{
+    height: 70px;
+}
+header img{
+    width: 11rem;
+}
+header .navbar a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #000;
+    margin: 0 2.5rem;
+}
+header .navbar a:hover{
+    /* text-decoration: underline orangered; */
+    color: orangered;
+}
+header .icons a{
+    font-size: 18px;
+    color: #000;
+    margin-left: 1.7rem;
+}
+header .icons a:hover{
+    color: orangered;
+}
+#menu-bar{
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    border: .1rem solid #000;
+    color: #000;
+    border-radius: .3rem;
+    cursor: pointer;
+    display: none;
+}
+        </style>
+        <header>
+        <div id="menu-bar" class="fa fa-bars"></div>
+        <div class="logo">
+            <a href="#" class="logo"><img src="img/logo.png"></a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="products.html">Product</a>
+            <a href="featured.html">Featured</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <div class="icons" >
+            <a href="wishlist.html"><i class="fa-solid fa-heart" ></i></a>
+            <a href="#"><i class="fa fa-shopping-cart" ></i></a>
+            <a href="#"><i class="fa fa-user" ></i></a>
+        </div>
+    </header>
+    <div class="productheader">
+    <div class="container">
+        <header>
+            <h1>Products</h1>
+            <div class="shopping">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="quantity">0</span>
+            </div>
+        </header>
+
+        <div class="list"></div>
+    </div>
+
+    <div class="card">
+        <h1>Card</h1>
+        <ul class="listCard">
+
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+</div>
+    <script src="scriptproduct.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        footer{
+            background: #343434;
+            padding-top: 50px;
+            
+        }
+        .container1{
+            width: 1140px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+        .footer-content{
+            width: 33.33%;
+        }
+        .footer-content h3{
+            font-size: 28px;
+            margin-bottom: 15px;
+            /* padding-right: 40px; */
+            text-align: center;
+            color: orangered;
+        }
+        .container1 .footer-content p{
+            width:235px;
+            margin: auto;
+            padding-left: 27px;
+            padding-top: 20px;
+            font-size: 16px;
+            color: #fff;
+        }
+        .container1 .footer-content p a{
+            color: #fff;
+        }
+        .footer-content i:hover{
+            color: orangered;
+        }
+        .footer-content ul{
+            text-align: center;
+        }
+        .footer-content .list{
+            padding: 0;
+        }
+        .container1 .footer-content ul a{
+            color: #fff;
+        }
+        
+        .footer-content .list li{
+            width: auto;
+            text-align: center;
+            list-style-type:none;
+            padding: 7px;
+            position: relative;
+        }
+        .footer-content .list li::before{
+            content: '';
+            position: absolute;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 100%;
+            width: 0;
+            height: 2px;
+            background: orangered;
+            transition-duration: .5s;
+        }
+        .footer-content .list li:hover::before{
+            width: 70px;
+        }
+        .social-icons{
+            text-align: center;
+            padding: 0;
+        }
+        .social-icons li{
+            display: inline-block;
+            text-align: center;
+            padding: 10px;
+        }
+        .social-icons i{
+            color: white;
+            font-size: 25px;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: orangered;
+        }
+        .social-icons i:hover{
+            color: orangered;
+        }
+        .bottom-bar{
+            background: orangered;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 50px;
+        }
+        .bottom-bar p{
+            color: #343434;
+            margin: 0;
+            font-size: 16px;
+            padding: 7px;
+        }
+    </style>
+    <footer>
+        <div class="container1">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p >Email : <a href=""><i style="text-transform: none;">Info@example.com</i></a></p>
+                <p >Phone : <a href=""><i style="text-transform: none;">+121 76697669</i></a></p>
+                <p >Address : <a href=""><i style="text-transform: none;">Ludhiana</i></a></p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                 <ul class="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="featured.html">Featured</a></li>
+                    <li><a href="">Contact</a></li>
+                 </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                 <li><a href="https://www.facebook.com/nike/"><i class="fab fa-facebook"></i></a></li>
+                 <li><a href="https://x.com/Nike"><i class="fab fa-twitter"></i></a></li>
+                 <li><a href="https://www.instagram.com/nike/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+                </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2024 Nike . All rights reserved</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
